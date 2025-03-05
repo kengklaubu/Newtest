@@ -1,0 +1,12 @@
+FROM python:3
+
+WORKDIR /kengkla
+
+COPY re.txt .
+
+RUN pip install -r re.txt
+
+COPY . .
+
+EXPOSE 8000
+CMD ["pytthon","manage.py","runserver","0.0.0.0:8000"]
