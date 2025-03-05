@@ -14,6 +14,6 @@ class Show(ListView):
         query = self.request.GET.get("search","")
 
         if query:
-            qeryset=qeryset.filter(subject_id__icontains=query)
+            qeryset=qeryset.filter(id__icontains=query)
         return qeryset
     
